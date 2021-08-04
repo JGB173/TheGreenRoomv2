@@ -17,7 +17,6 @@ html {
         "header header"
         "about about"
         "location location"
-        "book book"
         "footer footer";
 }
 
@@ -44,7 +43,7 @@ header {
     color: #f6f7f6; /* grey white */
 }
 
-.about .book {
+.about {
     background-color: #f6f7f6; /* grey white */
     color: #414349; /* black grey */
 }
@@ -55,13 +54,19 @@ header {
     color: #f6f7f6; /* grey white */
 }
 
+.location {
+    padding: 48px;
+    display: grid;
+    grid-gap: 32px;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+}
+
+
+
 .about {
     grid-area: about;
 }
 
-.book {
-    grid-area: book;
-}
 
 footer{
     grid-area: footer;
@@ -76,6 +81,7 @@ footer{
 
 .box {
     padding: 20px;
+    box-sizing: border-box;
 }
 
 h1, h2, h3, a {
@@ -172,15 +178,22 @@ h1, h2, h3, a {
     text-align: center;
 }
 
-
-.map {
-    float: right;
+.map{
+    max-height: 400px;
+    max-width: 400px;
+    left: 0px;
     margin: 25px 100px 25px 0px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); 
+
 }
 
-
+.map iframe{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
 
 .contact {
     background-color: #414349; /* black grey */
