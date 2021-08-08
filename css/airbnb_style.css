@@ -155,23 +155,81 @@ h1, h2, h3, a {
 }
 
 
-.nav_center {
+.navbar {
     display: flex;
     align-items: center; justify-content: center;
       margin: 0;
       position: absolute;
       top: 50%;
-      left: 50%;
+      left: 80%;
       transform: translate(-50%, -50%);
 }
 
 /* end of nav bar animation */
 
+
+.toggle-button {
+  position: absolute;
+  top: 12px;
+  right: 16px;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
+}
+
+.toggle-button .bar {
+  height: 3px;
+  width: 100%;
+  background-color: #f6f7f6; /* grey white */
+  border-radius: 10px;
+}
+
+@media (max-width: 1000px) {
+  .toggle-button {
+    display: flex;
+  }
+
+  .nav {
+  display: none; 
+  width: 100%;
+  }
+
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }  
+
+  .navbar-links ul{
+    width: 100%;
+    flex-direction: column;
+
+  }
+
+  .navbar-links li {
+    text-align: center;
+  }
+
+  .navbar-links li a {
+    padding: 8px 16px;
+  }
+
+  .navbar-links.active {
+    display: flex;
+  }
+
+}
+
+  
+
+
+
+
 /* end of navigation menu */
 
-.anchor {
-  scroll-margin-top: 170px;
-    
+.scroll-above {
+  scroll-margin-top: 170px; /* Makes scroll stop above the headings */
 }
 
 .name {
