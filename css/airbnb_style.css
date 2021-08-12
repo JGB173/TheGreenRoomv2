@@ -98,10 +98,20 @@ h1, h2, h3, a {
 
 /* navigation menu */
 
-.nav {
+nav{
+  grid-area: nav;
+  background: #414349; /* black grey */
+  height: auto;
+  width: 100%;
+  color: #f6f7f6; /* grey white */
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  border-bottom: 2px solid #f6f7f6; /* grey white */
+}
+
+.nav-links{
     list-style-type: none;
-    margin: 0;
-    padding: 0;
     overflow: hidden;
     background-color: transparent; 
     width: auto;
@@ -109,8 +119,6 @@ h1, h2, h3, a {
     float: left;
     border: 0;
     color: #f6f7f6; /* grey white */
-    text-align: center;
-    padding: 14px 16px;
     text-decoration: none;
     padding-left: 50px;
     padding-right: 50px;
@@ -121,115 +129,108 @@ h1, h2, h3, a {
     -webkit-transition:.5s;
     transition: .5s;
     position: relative;
-    
 }  
 
-.nav, li {
-     list-style-type: none;
-}
-
-
-
-/* nav bar animation */
-.nav {
-    overflow: hidden;
-}
-
-.nav::after {
+.nav-links::after {
     content: '';
     position: absolute;
     width: 50%;
-    height: 0.25rem;
+    height: 4px;
     left: 25%;
     right: 25%;
-    bottom: 0;
+    bottom: 15px;
     background: #f6f7f6; /* grey white */
-    transform: translateY(4px);
+    transform: translateY(20px);
     transition: transform 0.3s ease;
-    
     
 }
 
-.nav:hover::after {
+.nav-links:hover::after {
     transform: translateY(0);
 }
 
+nav ul{
+  float: right;
+  margin-right: 20px;
+}
+nav ul li{
+  display: inline-block;
+  line-height: 80px;
+  margin: 0 5px;
+}
+nav ul li a{
+  color: white;
+  font-size: 17px;
+  border-radius: 3px;
+  text-transform: uppercase;
+}
 
-.navbar {
-    display: flex;
-    align-items: center; justify-content: center;
-      margin: 0;
-      position: absolute;
-      top: 50%;
-      left: 80%;
-      transform: translate(-50%, -50%);
+.checkbtn{
+  font-size: 30px;
+  color: white;
+  float: right;
+  line-height: 80px;
+  margin-right: 40px;
+  cursor: pointer;
+  display: none;
+}
+#check{
+  display: none;
+}
+
+@media (max-width: 978px){
+
+  nav ul li a{
+    font-size: 16px;
+
+  }
+
+  .nav-links {
+        color: #414349; /* black grey */
+  }
+
+  .checkbtn{
+    display: block;
+  }
+  ul{
+    position: fixed;
+    width: 94%;
+    height: 100vh;
+    background: #f6f7f6; /* grey white */
+    top: 120px;
+    left: -100%;
+    text-align: center;
+    transition: all .5s;
+    
+  }
+  nav ul li{
+    display: block;
+    margin: 50px 0;
+    line-height: 30px;
+  }
+  nav ul li a{
+    font-size: 20px;
+  }
+  a:hover,a.active{
+    background: none;
+    color: #f6f7f6; /* grey white */
+  }
+  #check:checked ~ ul{
+    left: 0;
+  }
+}
+section{
+  background-size: cover;
+  height: calc(100% - 80px);
 }
 
 /* end of nav bar animation */
 
-
-.toggle-button {
-  position: absolute;
-  top: 12px;
-  right: 16px;
-  display: none;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 30px;
-  height: 21px;
-}
-
-.toggle-button .bar {
-  height: 3px;
-  width: 100%;
-  background-color: #f6f7f6; /* grey white */
-  border-radius: 10px;
-}
-
-@media (max-width: 1000px) {
-  .toggle-button {
-    display: flex;
-  }
-
-  .nav {
-  display: none; 
-  width: 100%;
-  }
-
-  .navbar {
-    flex-direction: column;
-    align-items: flex-start;
-  }  
-
-  .navbar-links ul{
-    width: 100%;
-    flex-direction: column;
-
-  }
-
-  .navbar-links li {
-    text-align: center;
-  }
-
-  .navbar-links li a {
-    padding: 8px 16px;
-  }
-
-  .navbar-links.active {
-    display: flex;
-  }
-
-}
-
-  
-
-
-
-
 /* end of navigation menu */
 
-.scroll-above {
-  scroll-margin-top: 170px; /* Makes scroll stop above the headings */
+.anchor {
+  scroll-margin-top: 170px;
+    
 }
 
 .name {
@@ -357,6 +358,3 @@ h1, h2, h3, a {
 }
 
 /* End Social media button styling */
-
-
-

@@ -16,7 +16,8 @@
     
     <!-- link to css -->
     <link href="css/airbnb_style.css" rel="stylesheet">
-    <script src="script.js"></script>
+    
+    
     
     <!-- google fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@700&family=Open+Sans:wght@300&display=swap" rel="stylesheet">
@@ -24,6 +25,10 @@
     
     <!-- Social media buttons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    
+    <!-- hamburger menu -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
     
 </head>
 
@@ -34,28 +39,19 @@
         
         <nav class="box">
                 
-            <a href="index.php">
+      <input type="checkbox" id="check">
+      <label for="check" class="checkbtn">
+        <i class="fas fa-bars"></i>
+      </label>
+<a href="index.php">
             <img class="logo"  alt="The Green Room Logo" src="Images/green_room_logov4.png">
             </a>
-            
-        <a href="#" class="toggle-button">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
+      <ul class="nav-center">
+        <li><a class="nav-links" href="#home">Home</a></li>
+        <li><a class="nav-links" href="#about">About</a></li>
+        <li><a class="nav-links" href="#location">Location</a></li>
+      </ul>
 
-        </a>
-       <div class="navbar-links">
-        <ul class="navbar">
-        
-        <li>        
-        <a href="#home" class="nav">Home </a> </li>
-        <li><a href="#about" class="nav" >About</a></li>
-        <li><a href="#location" class="nav">Location</a></li>
-        <li><a href="#book" class="nav">Book</a></li>
-        
-        </ul>
-       </div>
-            
         </nav>
         
         <div class="box carousel">
@@ -74,7 +70,7 @@
             
         </header>
         
-        <div class="box about scroll-above" id="about">
+        <div class="box about anchor" id="about">
         
         <h1 >About</h1>
             
@@ -88,7 +84,7 @@
         </div> <!-- end of about -->
         
         
-        <div class="box location scroll-above" id="location">  
+        <div class="box location anchor" id="location">  
 
          
         <div class="text">   
