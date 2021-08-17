@@ -178,6 +178,18 @@ nav ul li a{
   display: none;
 }
 
+.h-link {
+  grid-area: h-link;
+}
+
+.a-link {
+  grid-area: a-link;
+}
+
+.l-link {
+  grid-area: l-link;
+}
+
 @media (max-width: 978px){
 
   nav ul li a{
@@ -201,24 +213,44 @@ nav ul li a{
     left: -100%;
     text-align: center;
     transition: all .5s;
-    
+
   }
   nav ul li{
-    display: block;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+    "h-link"
+    "a-link"
+    "l-link";
     margin: 50px 0;
     line-height: 30px;
   }
   nav ul li a{
     font-size: 20px;
   }
-  a:hover,a.active{
-    background: none;
-    color: #f6f7f6; /* grey white */
-  }
+
+
+
+.nav-links::after {
+    content: '';
+    position: absolute;
+    width: 12%;
+    height: 4px;
+    left: 44%;
+    right: 55%;
+    bottom: 0.5px;
+    background: #414349; /* black grey */
+    transform: translateY(20px);
+    transition: transform 0.3s ease;
+    
+}
+
+  } /* end of max width tag */
   #check:checked ~ ul{
     left: 0;
   }
-}
+
 section{
   background-size: cover;
   height: calc(100% - 80px);
