@@ -343,7 +343,70 @@ section {
 }
 
 
+/* Contact page styling */
 
+.inner-width {
+  max-width: 600px;
+  margin: auto;
+  padding: 0 20px;
+}
+
+.name, .email, .message {
+  background: none;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid;
+  color: #414349; /* black grey */
+  padding: 10px 6px;
+  font-size: 14px;
+  margin-bottom: 40px;
+}
+
+.name {
+  float: left;
+  width: 270px;
+}
+
+.email {
+  float: right;
+  width: 270px;
+}
+
+.message {
+  min-width: 100%;
+  max-width: 100%;
+}
+
+.contact-section button {
+  background: none;
+  color:  #414349; /* black grey */
+  border: 1px solid #414349; /* black grey */
+  padding: 12px 40px;
+  border-radius: 8px;
+  text-transform: uppercase;
+  font-size: 14px;
+  transition: 0.4s linear;
+  cursor: pointer;
+}
+
+.contact-section button:hover {
+  background: #414349; /* black grey */
+  color: #f6f7f6; /* grey white */
+}
+
+
+@media screen and (max-width: 680px) {
+  .name, .email {
+    width: 100%;
+  }
+
+  .name, .email, .message {
+    float: left;
+  }
+}
+
+
+/* end of contact styling */
 
 /* Social media button styling */
 
