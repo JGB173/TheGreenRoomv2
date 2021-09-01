@@ -10,24 +10,28 @@
       <title>The Green Room</title>
       <!-- link to css -->
       <link href="css/airbnb_style.css" rel="stylesheet">
+       <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
       <!-- google fonts -->
       <link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@700&family=Open+Sans:wght@300&display=swap" rel="stylesheet">
       <!-- Social media buttons -->
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-   </head>
-   <body>
       <!-- link to js -->
       <script src="js/script.js"></script>
+   </head>
+   <body>
+ 
+      
       <div class="wrapper" id="home">
          <nav class="box">
             <input type="checkbox" id="check">
             <label for="check" class="checkbtn">
-               <div class="container" onclick="myFunction(this)">
+               <div class="container" onclick="myFunction(this)" >
                   <div class="bar1"></div>
                   <div class="bar2"></div>
                   <div class="bar3"></div>
                </div>
-            </label>
+         </label>
             <a href="index.php">
             <img class="logo"  alt="The Green Room Logo" src="Images/green_room_logov4.png">
             </a>
@@ -39,6 +43,7 @@
             </ul>
          </nav>
          <div class="box carousel">
+           
          </div>
          <header class="box">
             <h1 class="title">
@@ -59,7 +64,7 @@
                <h1>Location</h1>
                <p>
                   The Green Room is in the beautiful area of Matakana. You could walk to Matakana from <br> 
-                  the Green Room and on the way you could stop off at the Morris and James where you could <br> 
+                 the Green Room and on the way you could stop off at the Morris and James where you could <br> 
                   buy some pottery or vist the cafe on your way to the Matakana Market or one of the dinning areas <br> 
                   in Matakana
                </p>
@@ -74,10 +79,12 @@
 <div class="contact-section box anchor" id="contact">
       <div class="inner-width">
         <h1>Get in touch with us</h1>
-        <input type="text" class="name" placeholder="Your Name">
-        <input type="email" class="email" placeholder="Your Email">
-        <textarea rows="1" placeholder="Message" class="message"></textarea>
+        <form action="https://getform.io/f/15db1bc6-306f-407d-9497-d594b9a1eeea" method="POST">
+        <input type="text" class="name" placeholder="Your Name" name="name">
+        <input type="email" class="email" placeholder="Your Email" name="email">
+        <textarea rows="1" placeholder="Message" class="message" name="message"></textarea>
         <button>Get in touch</button>
+        </form>
       </div>
     </div> <!-- end of contact -->
 
@@ -96,5 +103,11 @@
          <!-- end of footer -->
       </div>
       <!-- end of wrapper -->
+
+<!-- Popper and Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js" integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous"></script>
+
+
    </body>
 </html>
