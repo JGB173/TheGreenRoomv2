@@ -13,7 +13,7 @@ html {
 	display: grid;
 	grid-template-columns: 1fr;
 	grid-template-rows: auto;
-	grid-template-areas: "nav nav" "carousel carousel" "header header" "about about" "location location" "contact contact" "footer footer";
+	grid-template-areas: "nav nav" "carousel carousel" "about about" "location location" "contact contact" "footer footer";
 }
 
 nav {
@@ -47,19 +47,12 @@ nav {
     min-height: 500px;
   }
 
-@media (max-width: 1500px) {
+@media (max-width: 1000px) {
   .carousel-inner img {
     min-height: auto;
   }
 }
 
-header {
-	grid-area: header;
-	background-color: #414349;
-	/* black grey */
-	color: #f6f7f6;
-	/* grey white */
-}
 
 .about .contact-section{
 	background-color: #f6f7f6;
